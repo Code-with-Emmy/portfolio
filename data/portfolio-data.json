@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "title": "CodeWithEmmy | Full Stack Developer",
+    "description": "Portfolio website showcasing product design work and skills"
+  },
+  "personal": {
+    "name": "Emmanuel Chukwuebuka Osuagwu",
+    "title": "Full Stack Mobile/Web Developer",
+    "location": "Imo State, Nigeria",
+    "avatar": "/my-image.jpg",
+    "email": "osuagwuemmanuel0907@gmail.com",
+    "phone": "+234 (707) 068-2621",
+    "workingHours": "Monday - Friday, 9am - 5pm PST",
+    "availableForWork": true,
+    "badges": ["UI/UX", "Graphics Designer", "Full Stack Developer"],
+    "social": [
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/Code-with-Emmy",
+        "icon": "Github"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/in/emmanuel-osuagwu-33327b363",
+        "icon": "Linkedin"
+      },
+      {
+        "platform": "Twitter",
+        "url": "https://x.com/code_with_emmy?s=21",
+        "icon": "Twitter"
+      },
+      {
+        "platform": "Instagram",
+        "url": "#",
+        "icon": "Instagram"
+      }
+    ]
+  },
+  "about": {
+  "bio": "I build robust, scalable, and user-friendly web and mobile applications. I'm a self-taught programmer and freelancer with over 2+ years of experience in Full Stack development. I specialize in creating seamless digital solutions from concept to deployment. Passionate about clean code, accessibility, and delivering real business value.",
+    "focus": [
+      "Developing scalable and maintainable web applications",
+      "Integrating modern front-end and back-end technologies",
+      "Optimizing performance and ensuring accessibility"
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Native",
+        "level": 100,
+        "flag": "🇺🇸"
+      },
+      {
+        "name": "Spanish",
+        "proficiency": "Basic",
+        "level": 30,
+        "flag": "🇪🇸"
+      },
+      {
+        "name": "Pidgin English",
+        "proficiency": "Native",
+        "level": 80,
+        "flag": "pidgin"
+      },
+      {
+        "name": "German",
+        "proficiency": "Basic",
+        "level": 30,
+        "flag": "🇩🇪"
+      }
+    ],
+  "interests": ["Web Development", "APIs", "Cloud Computing", "DevOps", "Open Source", "Freelancing"]
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Experience",
+      "href": "#experience"
+    },
+    {
+      "label": "Credentials",
+      "href": "#credentials"
+    },
+    {
+      "label": "Skills",
+      "href": "#skills"
+    },
+    {
+      "label": "Projects",
+      "href": "#projects"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Full Stack Developer",
+      "company": "CodeWithEmmy Inc.",
+      "period": "2021 - Present",
+      "description": "Lead the development of flagship web applications, managing a team of 3 developers. Architected and implemented scalable solutions using modern JavaScript frameworks and cloud services. Conducted code reviews, optimized performance, and ensured best practices.",
+      "achievements": [
+        "Built a real-time dashboard, increasing user engagement by 35%",
+        "Led the launch of 3 major features, contributing to a 25% increase in user retention",
+        "Established CI/CD pipelines that improved deployment speed and reliability"
+      ],
+      "technologies": ["React", "Node.js", "AWS", "MongoDB", "Figma"]
+    },
+    {
+      "title": "Full Stack Developer",
+      "company": "Undisclosed",
+      "period": "2018 - 2021",
+      "description": "Worked with cross-functional teams to deliver web and mobile applications for various clients. Developed RESTful APIs, integrated third-party services, and implemented responsive UIs.",
+      "achievements": [
+        "Delivered 12+ client projects across fintech, healthcare, and e-commerce",
+        "Improved application performance by an average of 22% through code optimization",
+        "Mentored junior developers and led code review sessions"
+      ],
+      "technologies": ["JavaScript", "React", "Express", "MySQL", "Docker"]
+    },
+    {
+      "title": "Software Engineering Intern",
+      "company": "Creative Solutions",
+      "period": "2017 - 2018",
+      "description": "Assisted the engineering team in building and maintaining web applications. Participated in code reviews, bug fixing, and feature development.",
+      "achievements": [
+        "Improved mobile responsiveness for the company website",
+        "Helped create a reusable component library",
+        "Contributed to API documentation and testing"
+      ],
+      "technologies": ["HTML/CSS", "JavaScript", "Git"]
+    }
+  ],
+  "credentials": {
+    "certifications": [
+      {
+        "name": "Full Stack Developer Certificate",
+        "issuer": "Udemy",
+        "date": "2023",
+        "logo": "/udemy-logo.png"
+      },
+      {
+        "name": "JavaScript Course",
+        "issuer": "Udemy",
+        "date": "2022",
+        "logo": "/udemy-logo.png"
+      },
+      {
+        "name": "Cloud Practitioner Certification",
+        "issuer": "AWS",
+        "date": "2020",
+        "logo": "/aws.png"
+      }
+    ],
+    "education": [
+      {
+        "degree": "Higher National Diploma in Computer Science",
+        "institution": "Imo State Polytechnic, Omuma, Nigeria",
+        "year": "2017-2022",
+        "logo": "/imopoly.jpeg"
+      }
+    ],
+    "skills": [
+      "Full Stack Development",
+      "API Design",
+      "Database Management",
+      "Cloud Deployment",
+      "UI Design",
+      "Accessibility",
+      "Testing",
+      "Agile Methodologies"
+    ]
+  },
+  "technicalSkills": {
+    "design": ["Figma", "Adobe XD", "Sketch", "Photoshop"],
+    "development": ["HTML/CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB", "MySQL", "Tailwind", "SCSS", "Git", "AWS", "Docker", "Responsive Design"],
+    "uxMethods": [
+      "User Research",
+      "Usability Testing",
+      "Wireframing",
+      "Prototyping",
+      "Information Architecture",
+      "User Flows"
+    ],
+    "softSkills": ["Team Leadership", "Project Management", "Client Communication", "Mentoring", "Presentations"]
+  },
+  "clientReviews": [
+    {
+      "client": "Dr. Michael Smith",
+      "company": "FinTech Innovations Ltd.",
+      "review": "Emmanuel demonstrated exceptional technical expertise and professionalism throughout our project. He architected and delivered a robust, scalable financial dashboard that exceeded our expectations. His proactive communication, attention to detail, and ability to solve complex problems made a significant impact on our product's success. I highly recommend Emmanuel to anyone seeking a reliable and talented full stack developer.",
+      "rating": 5,
+      "project": "Financial Analytics Dashboard"
+    },
+    {
+      "client": "Sarah Johnson",
+      "company": "HealthPlus Solutions",
+      "review": "It was a pleasure working with Emmanuel on our healthcare platform. He was quick to understand our requirements, provided valuable insights, and delivered high-quality code on time. His dedication and collaborative approach ensured a smooth development process from start to finish.",
+      "rating": 5,
+      "project": "Healthcare Platform Development"
+    }
+    ,
+    {
+      "client": "Chinedu Okafor",
+      "company": "NaijaTech Solutions",
+      "review": "Emmanuel's expertise in full stack development was evident from the start. He delivered our logistics management system with impressive speed and precision. His ability to troubleshoot and optimize performance was invaluable. We look forward to working with him again.",
+      "rating": 5,
+      "project": "Logistics Management System"
+    },
+    {
+      "client": "Ngozi Nwosu",
+      "company": "EduConnect Africa",
+      "review": "Working with Emmanuel was a seamless experience. He transformed our ideas into a functional and visually appealing e-learning platform. His professionalism and technical skills are top-notch.",
+      "rating": 5,
+      "project": "E-learning Platform Development"
+    },
+    {
+      "client": "Emeka Umeh",
+      "company": "GreenFields Agro",
+      "review": "Emmanuel exceeded our expectations by delivering a robust and scalable web application for our agritech startup. His attention to detail and commitment to quality were outstanding.",
+      "rating": 5,
+      "project": "AgriTech Web Application"
+    }
+  ]
+}
