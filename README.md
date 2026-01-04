@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+
+# Codewithemmy
+
+=======
+
 # Portfolio Website with JSON Content Management
 
 This portfolio website is designed to be easily customizable through a JSON data file. This allows you to update your content without having to modify the codebase directly.
@@ -24,23 +30,23 @@ The JSON file is organized into several sections:
 
 \`\`\`json
 "personal": {
-  "name": "Your Name",
-  "title": "Your Title",
-  "location": "Your Location",
-  "avatar": "/path/to/your/avatar.png",
-  "email": "your.email@example.com",
-  "phone": "Your Phone Number",
-  "workingHours": "Your Working Hours",
-  "availableForWork": true,
-  "badges": ["Badge 1", "Badge 2", "Badge 3"],
-  "social": [
-    {
-      "platform": "GitHub",
-      "url": "https://github.com/yourusername",
-      "icon": "Github"
-    },
-    // Add more social links as needed
-  ]
+"name": "Your Name",
+"title": "Your Title",
+"location": "Your Location",
+"avatar": "/path/to/your/avatar.png",
+"email": "your.email@example.com",
+"phone": "Your Phone Number",
+"workingHours": "Your Working Hours",
+"availableForWork": true,
+"badges": ["Badge 1", "Badge 2", "Badge 3"],
+"social": [
+{
+"platform": "GitHub",
+"url": "https://github.com/yourusername",
+"icon": "Github"
+},
+// Add more social links as needed
+]
 }
 \`\`\`
 
@@ -48,26 +54,26 @@ The JSON file is organized into several sections:
 
 \`\`\`json
 "about": {
-  "bio": "Your bio text here...",
-  "focus": [
-    "Focus point 1",
-    "Focus point 2",
-    "Focus point 3"
-  ],
-  "languages": [
-    {
-      "name": "Language Name",
-      "proficiency": "Proficiency Level",
-      "level": 100,
-      "flag": "🏳️"
-    },
-    // Add more languages as needed
-  ],
-  "interests": [
-    "Interest 1",
-    "Interest 2",
-    // Add more interests as needed
-  ]
+"bio": "Your bio text here...",
+"focus": [
+"Focus point 1",
+"Focus point 2",
+"Focus point 3"
+],
+"languages": [
+{
+"name": "Language Name",
+"proficiency": "Proficiency Level",
+"level": 100,
+"flag": "🏳️"
+},
+// Add more languages as needed
+],
+"interests": [
+"Interest 1",
+"Interest 2",
+// Add more interests as needed
+]
 }
 \`\`\`
 
@@ -75,19 +81,19 @@ The JSON file is organized into several sections:
 
 \`\`\`json
 "experience": [
-  {
-    "title": "Job Title",
-    "company": "Company Name",
-    "period": "Employment Period",
-    "description": "Job description...",
-    "achievements": [
-      "Achievement 1",
-      "Achievement 2",
-      // Add more achievements as needed
-    ],
-    "technologies": ["Technology 1", "Technology 2"]
-  },
-  // Add more experiences as needed
+{
+"title": "Job Title",
+"company": "Company Name",
+"period": "Employment Period",
+"description": "Job description...",
+"achievements": [
+"Achievement 1",
+"Achievement 2",
+// Add more achievements as needed
+],
+"technologies": ["Technology 1", "Technology 2"]
+},
+// Add more experiences as needed
 ]
 \`\`\`
 
@@ -95,29 +101,29 @@ The JSON file is organized into several sections:
 
 \`\`\`json
 "credentials": {
-  "certifications": [
-    {
-      "name": "Certification Name",
-      "issuer": "Issuer Name",
-      "date": "Issue Date",
-      "logo": "/path/to/logo.png"
-    },
-    // Add more certifications as needed
-  ],
-  "education": [
-    {
-      "degree": "Degree Name",
-      "institution": "Institution Name",
-      "year": "Year Range",
-      "logo": "/path/to/logo.png"
-    },
-    // Add more education entries as needed
-  ],
-  "skills": [
-    "Skill 1",
-    "Skill 2",
-    // Add more skills as needed
-  ]
+"certifications": [
+{
+"name": "Certification Name",
+"issuer": "Issuer Name",
+"date": "Issue Date",
+"logo": "/path/to/logo.png"
+},
+// Add more certifications as needed
+],
+"education": [
+{
+"degree": "Degree Name",
+"institution": "Institution Name",
+"year": "Year Range",
+"logo": "/path/to/logo.png"
+},
+// Add more education entries as needed
+],
+"skills": [
+"Skill 1",
+"Skill 2",
+// Add more skills as needed
+]
 }
 \`\`\`
 
@@ -125,26 +131,26 @@ The JSON file is organized into several sections:
 
 \`\`\`json
 "technicalSkills": {
-  "design": [
-    "Design Skill 1",
-    "Design Skill 2",
-    // Add more design skills as needed
-  ],
-  "development": [
-    "Development Skill 1",
-    "Development Skill 2",
-    // Add more development skills as needed
-  ],
-  "uxMethods": [
-    "UX Method 1",
-    "UX Method 2",
-    // Add more UX methods as needed
-  ],
-  "softSkills": [
-    "Soft Skill 1",
-    "Soft Skill 2",
-    // Add more soft skills as needed
-  ]
+"design": [
+"Design Skill 1",
+"Design Skill 2",
+// Add more design skills as needed
+],
+"development": [
+"Development Skill 1",
+"Development Skill 2",
+// Add more development skills as needed
+],
+"uxMethods": [
+"UX Method 1",
+"UX Method 2",
+// Add more UX methods as needed
+],
+"softSkills": [
+"Soft Skill 1",
+"Soft Skill 2",
+// Add more soft skills as needed
+]
 }
 \`\`\`
 
@@ -165,9 +171,13 @@ To run the development server:
 
 \`\`\`bash
 npm run dev
+
 # or
+
 yarn dev
+
 # or
+
 pnpm dev
 \`\`\`
 
@@ -176,8 +186,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 This refactoring allows users to update all content through the JSON file without modifying the codebase. The components now dynamically read from this data source, making content updates easier and more manageable.
 \`\`\`
-
-
 
 ```ts file="lib/projects.ts"
 [v0-no-op-code-block-prefix]export interface ProjectGalleryImage {
@@ -361,3 +369,5 @@ const projects: Project[] = [
 ]
 
 export { projects }
+>>>>>>> a804870 (Initial portfolio commit)
+```
