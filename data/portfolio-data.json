@@ -37,7 +37,7 @@
     ]
   },
   "about": {
-  "bio": "I build robust, scalable, and user-friendly web and mobile applications. I'm a self-taught programmer and freelancer with over 2+ years of experience in Full Stack development. I specialize in creating seamless digital solutions from concept to deployment. Passionate about clean code, accessibility, and delivering real business value.",
+    "bio": "I build robust, scalable, and user-friendly web and mobile applications. I'm a self-taught programmer and freelancer with over 2+ years of experience in Full Stack development. I specialize in creating seamless digital solutions from concept to deployment. Passionate about clean code, accessibility, and delivering real business value.",
     "focus": [
       "Developing scalable and maintainable web applications",
       "Integrating modern front-end and back-end technologies",
@@ -69,7 +69,14 @@
         "flag": "🇩🇪"
       }
     ],
-  "interests": ["Web Development", "APIs", "Cloud Computing", "DevOps", "Open Source", "Freelancing"]
+    "interests": [
+      "Web Development",
+      "APIs",
+      "Cloud Computing",
+      "DevOps",
+      "Open Source",
+      "Freelancing"
+    ]
   },
   "navigation": [
     {
@@ -95,7 +102,27 @@
   ],
   "experience": [
     {
-      "title": "Senior Full Stack Developer",
+      "title": "Full Stack Developer",
+      "company": "Aierth Technologys",
+      "period": "2026 - Present",
+      "description": "Lead Software Engineer responsible for designing and implementing end-to-end web solutions. Collaborate with cross-functional teams to deliver high-quality products on time. Utilize modern frameworks and cloud services to build scalable applications.",
+      "achievements": [
+        "Built a real-time dashboard, For the learning management system, increasing user engagement by 35%",
+        "Contributed to API documentation and testing",
+        "Fast Deployment of the project within the stipulated time frame"
+      ],
+      "technologies": [
+        "React",
+        "Nextjs",
+        "Node.js",
+        "Render",
+        "Superbase",
+        "Tailwind",
+        "Figma"
+      ]
+    },
+    {
+      "title": "Full Stack Developer",
       "company": "CodeWithEmmy Inc.",
       "period": "2021 - Present",
       "description": "Lead the development of flagship web applications, managing a team of 3 developers. Architected and implemented scalable solutions using modern JavaScript frameworks and cloud services. Conducted code reviews, optimized performance, and ensured best practices.",
@@ -173,7 +200,23 @@
   },
   "technicalSkills": {
     "design": ["Figma", "Adobe XD", "Sketch", "Photoshop"],
-    "development": ["HTML/CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB", "MySQL", "Tailwind", "SCSS", "Git", "AWS", "Docker", "Responsive Design"],
+    "development": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Next.js",
+      "Express",
+      "MongoDB",
+      "MySQL",
+      "Tailwind",
+      "Superbase",
+      "TypeScript",
+      "Git",
+      "AWS",
+      "Docker",
+      "Responsive Design"
+    ],
     "uxMethods": [
       "User Research",
       "Usability Testing",
@@ -182,24 +225,29 @@
       "Information Architecture",
       "User Flows"
     ],
-    "softSkills": ["Team Leadership", "Project Management", "Client Communication", "Mentoring", "Presentations"]
+    "softSkills": [
+      "Team Leadership",
+      "Project Management",
+      "Client Communication",
+      "Mentoring",
+      "Presentations"
+    ]
   },
   "clientReviews": [
     {
-      "client": "Dr. Michael Smith",
-      "company": "FinTech Innovations Ltd.",
+      "client": "Dr. Michael",
+      "company": "Dr Appointment Web Application.",
       "review": "Emmanuel demonstrated exceptional technical expertise and professionalism throughout our project. He architected and delivered a robust, scalable financial dashboard that exceeded our expectations. His proactive communication, attention to detail, and ability to solve complex problems made a significant impact on our product's success. I highly recommend Emmanuel to anyone seeking a reliable and talented full stack developer.",
       "rating": 5,
       "project": "Financial Analytics Dashboard"
     },
     {
-      "client": "Sarah Johnson",
+      "client": "Sarah",
       "company": "HealthPlus Solutions",
       "review": "It was a pleasure working with Emmanuel on our healthcare platform. He was quick to understand our requirements, provided valuable insights, and delivered high-quality code on time. His dedication and collaborative approach ensured a smooth development process from start to finish.",
       "rating": 5,
       "project": "Healthcare Platform Development"
-    }
-    ,
+    },
     {
       "client": "Chinedu Okafor",
       "company": "NaijaTech Solutions",
