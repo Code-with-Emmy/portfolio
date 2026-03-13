@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "CodeWithEmmy | Full Stack Developer",
-    "description": "Portfolio website showcasing product design work and skills"
+    "description": "Portfolio website showcasing full-stack projects and skills"
   },
   "personal": {
     "name": "Emmanuel Chukwuebuka Osuagwu",
@@ -37,7 +37,7 @@
     ]
   },
   "about": {
-    "bio": "I build robust, scalable, and user-friendly web and mobile applications. I'm a self-taught programmer and freelancer with over 2+ years of experience in Full Stack development. I specialize in creating seamless digital solutions from concept to deployment. Passionate about clean code, accessibility, and delivering real business value.",
+    "bio": "I build robust, scalable, and user-friendly web and mobile applications. I'm a self-taught programmer and freelancer with over 2 years of experience in full-stack development. I specialize in creating seamless digital solutions from concept to launch. I'm passionate about clean code, accessibility, and delivering real business value.",
     "focus": [
       "Developing scalable and maintainable web applications",
       "Integrating modern front-end and back-end technologies",
@@ -72,8 +72,8 @@
     "interests": [
       "Web Development",
       "APIs",
-      "Cloud Computing",
-      "DevOps",
+      "Product Design",
+      "Developer Tooling",
       "Open Source",
       "Freelancing"
     ]
@@ -103,20 +103,19 @@
   "experience": [
     {
       "title": "Full Stack Developer",
-      "company": "Aierth Technologys",
+      "company": "Aierth Tech",
       "period": "2026 - Present",
-      "description": "Lead Software Engineer responsible for designing and implementing end-to-end web solutions. Collaborate with cross-functional teams to deliver high-quality products on time. Utilize modern frameworks and cloud services to build scalable applications.",
+      "description": "Lead Software Engineer responsible for designing and implementing end-to-end web solutions. Collaborate with cross-functional teams to deliver high-quality products on time. Use modern frameworks and backend tools to build scalable applications.",
       "achievements": [
-        "Built a real-time dashboard, For the learning management system, increasing user engagement by 35%",
+        "Built a real-time dashboard for the learning management system, increasing user engagement by 35%",
         "Contributed to API documentation and testing",
-        "Fast Deployment of the project within the stipulated time frame"
+        "Delivered the project within the agreed timeline"
       ],
       "technologies": [
         "React",
-        "Nextjs",
+        "Next.js",
         "Node.js",
-        "Render",
-        "Superbase",
+        "Supabase",
         "Tailwind",
         "Figma"
       ]
@@ -125,13 +124,13 @@
       "title": "Full Stack Developer",
       "company": "CodeWithEmmy Inc.",
       "period": "2021 - Present",
-      "description": "Lead the development of flagship web applications, managing a team of 3 developers. Architected and implemented scalable solutions using modern JavaScript frameworks and cloud services. Conducted code reviews, optimized performance, and ensured best practices.",
+      "description": "Lead the development of flagship web applications, managing a team of 3 developers. Architect scalable solutions using modern JavaScript frameworks. Conduct code reviews, optimize performance, and ensure best practices.",
       "achievements": [
         "Built a real-time dashboard, increasing user engagement by 35%",
         "Led the launch of 3 major features, contributing to a 25% increase in user retention",
         "Established CI/CD pipelines that improved deployment speed and reliability"
       ],
-      "technologies": ["React", "Node.js", "AWS", "MongoDB", "Figma"]
+      "technologies": ["React", "Node.js", "Next.js", "MongoDB", "Figma"]
     },
     {
       "title": "Full Stack Developer",
@@ -171,12 +170,6 @@
         "issuer": "Udemy",
         "date": "2022",
         "logo": "/udemy-logo.png"
-      },
-      {
-        "name": "Cloud Practitioner Certification",
-        "issuer": "AWS",
-        "date": "2020",
-        "logo": "/aws.png"
       }
     ],
     "education": [
@@ -191,7 +184,7 @@
       "Full Stack Development",
       "API Design",
       "Database Management",
-      "Cloud Deployment",
+      "Deployment Workflows",
       "UI Design",
       "Accessibility",
       "Testing",
@@ -210,10 +203,9 @@
       "MongoDB",
       "MySQL",
       "Tailwind",
-      "Superbase",
+      "Supabase",
       "TypeScript",
       "Git",
-      "AWS",
       "Docker",
       "Responsive Design"
     ],

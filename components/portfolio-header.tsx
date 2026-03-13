@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { getNavItems, getPersonalInfo } from "@/lib/data"
@@ -10,11 +11,18 @@ export function PortfolioHeader() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("")
+  const pathname = usePathname()
 
   const navItems = getNavItems()
   const personalInfo = getPersonalInfo()
+  const isHomePage = pathname === "/"
+  const showSolidBackground = !isHomePage || scrolled
 
   useEffect(() => {
+    if (!isHomePage) {
+      return
+    }
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
 
@@ -42,41 +50,59 @@ export function PortfolioHeader() {
     }
 
     window.addEventListener("scroll", handleScroll)
+    handleScroll()
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [navItems])
+  }, [isHomePage, navItems])
+
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : ""
+
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [mobileMenuOpen])
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
+  }
+
+  const getNavHref = (href: string) => {
+    if (!href.startsWith("#")) {
+      return href
+    }
+
+    return isHomePage ? href : `/${href}`
   }
 
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4",
-        scrolled ? "bg-zinc-900/90 backdrop-blur-md shadow-md py-2" : "bg-transparent",
+        showSolidBackground ? "bg-zinc-900/90 backdrop-blur-md shadow-md py-2" : "bg-transparent",
       )}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 flex items-center justify-between gap-4">
         {/* Logo/Name */}
-        <Link href="/" className="flex items-center group">
-          <div className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 font-bold text-xl relative overflow-hidden transition-transform duration-300 group-hover:scale-105">
+        <Link href="/" className="flex min-w-0 items-center group">
+          <div className="truncate text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 font-bold text-lg lg:text-xl relative overflow-hidden transition-transform duration-300 group-hover:scale-105">
             {personalInfo.name}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
           </div>
-          <span className="text-zinc-400 text-sm ml-2 hidden sm:inline-block transition-all duration-300 group-hover:text-zinc-300">
+          <span className="text-zinc-400 text-sm ml-2 hidden xl:inline-block transition-all duration-300 group-hover:text-zinc-300">
             / {personalInfo.title}
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-1">
+        <nav className="hidden lg:flex items-center space-x-1 shrink-0">
           {navItems.map((item) => {
-            const isActive = item.href === "/" ? activeSection === "" : activeSection === item.href.substring(1)
+            const isActive =
+              isHomePage && (item.href === "/" ? activeSection === "" : activeSection === item.href.substring(1))
 
             return (
               <Link
                 key={item.label}
-                href={item.href}
+                href={getNavHref(item.href)}
                 className={cn(
                   "px-3 py-2 text-sm relative group transition-all duration-300",
                   isActive ? "text-cyan-400" : "text-zinc-400 hover:text-white",
@@ -101,9 +127,10 @@ export function PortfolioHeader() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-zinc-400 hover:text-white transition-colors duration-300 relative overflow-hidden group"
+          className="lg:hidden text-zinc-400 hover:text-white transition-colors duration-300 relative overflow-hidden group"
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
+          type="button"
         >
           <span className="relative z-10">{mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}</span>
           <span className="absolute inset-0 scale-0 rounded-full bg-zinc-700/50 group-hover:scale-100 transition-transform duration-300"></span>
@@ -114,17 +141,29 @@ export function PortfolioHeader() {
       <div
         className={cn(
           "fixed inset-0 bg-black/95 z-40 flex flex-col pt-20 px-4 md:hidden transition-all duration-500",
+          "lg:hidden",
           mobileMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none",
         )}
       >
+        <div className="flex justify-end mb-6">
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(false)}
+            className="inline-flex items-center justify-center rounded-full border border-zinc-800 bg-zinc-900/80 p-3 text-zinc-300 transition-colors hover:text-white hover:border-cyan-400/50"
+            aria-label="Close menu"
+          >
+            <X size={22} />
+          </button>
+        </div>
         <nav className="flex flex-col space-y-4">
           {navItems.map((item, index) => {
-            const isActive = item.href === "/" ? activeSection === "" : activeSection === item.href.substring(1)
+            const isActive =
+              isHomePage && (item.href === "/" ? activeSection === "" : activeSection === item.href.substring(1))
 
             return (
               <Link
                 key={item.label}
-                href={item.href}
+                href={getNavHref(item.href)}
                 className={cn(
                   "px-3 py-4 text-lg border-b border-zinc-800 relative group transition-all duration-300",
                   isActive ? "text-cyan-400 border-cyan-400/30" : "text-zinc-300 hover:text-white hover:pl-5",

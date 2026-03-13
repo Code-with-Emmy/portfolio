@@ -51,7 +51,7 @@ export function ContactForm() {
         </div>
         <h4 className="text-lg font-medium mb-2">Message Sent!</h4>
         <p className="text-sm text-center text-zinc-400 mb-4">
-          Thanks for reaching out. I'll get back to you as soon as possible.
+          Thanks for reaching out. I&apos;ll get back to you as soon as possible.
         </p>
         <Button variant="outline" onClick={() => setIsSubmitted(false)}>
           Send Another Message

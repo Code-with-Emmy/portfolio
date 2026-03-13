@@ -62,20 +62,24 @@ const presets: Record<AnimationPreset, Partial<AnimationSettings>> = {
 const AnimationContext = createContext<AnimationContextType | undefined>(undefined)
 
 export function AnimationProvider({ children }: { children: ReactNode }) {
-  const [settings, setSettings] = useState<AnimationSettings>(defaultSettings)
-
-  // Load settings from localStorage on initial render
-  useEffect(() => {
-    const savedSettings = localStorage.getItem("animationSettings")
-    if (savedSettings) {
-      try {
-        const parsedSettings = JSON.parse(savedSettings)
-        setSettings((prev) => ({ ...prev, ...parsedSettings }))
-      } catch (error) {
-        console.error("Failed to parse animation settings:", error)
-      }
+  const [settings, setSettings] = useState<AnimationSettings>(() => {
+    if (typeof window === "undefined") {
+      return defaultSettings
     }
-  }, [])
+
+    const savedSettings = window.localStorage.getItem("animationSettings")
+    if (!savedSettings) {
+      return defaultSettings
+    }
+
+    try {
+      const parsedSettings = JSON.parse(savedSettings)
+      return { ...defaultSettings, ...parsedSettings }
+    } catch (error) {
+      console.error("Failed to parse animation settings:", error)
+      return defaultSettings
+    }
+  })
 
   // Save settings to localStorage whenever they change
   useEffect(() => {

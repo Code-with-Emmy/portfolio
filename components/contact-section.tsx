@@ -17,7 +17,7 @@ export function ContactSection() {
 
             <div className="space-y-6">
               <p className="text-zinc-300">
-                I'm always interested in new projects and opportunities. Feel free to reach out if you want to work
+                I&apos;m always interested in new projects and opportunities. Feel free to reach out if you want to work
                 together or just say hello!
               </p>
 

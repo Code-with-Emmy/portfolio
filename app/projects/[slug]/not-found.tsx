@@ -11,7 +11,7 @@ export default function ProjectNotFound() {
         </div>
         <h1 className="text-3xl font-bold">Project Not Found</h1>
         <p className="text-zinc-400 max-w-md mx-auto">
-          The project you're looking for doesn't exist or has been removed.
+          The project you&apos;re looking for doesn&apos;t exist or has been removed.
         </p>
         <Button asChild className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600">
           <Link href="/">
