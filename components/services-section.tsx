@@ -83,7 +83,11 @@ const workProcess = [
   }
 ]
 
-export function ServicesSection() {
+interface ServicesSectionProps {
+  onStartProject?: () => void
+}
+
+export function ServicesSection({ onStartProject }: ServicesSectionProps) {
   return (
     <div className="space-y-6" id="services">
       <div className="flex items-center justify-between">
@@ -136,8 +140,11 @@ export function ServicesSection() {
               ))}
             </div>
             <div className="mt-4 pt-4 border-t border-zinc-800">
-              <Button className="w-full bg-cyan-500 hover:bg-cyan-600 text-black font-bold">
-                Start Your Project
+              <Button 
+                onClick={onStartProject}
+                className="w-full bg-cyan-500 hover:bg-cyan-600 text-black font-bold h-12"
+              >
+                Start Your Project (via WhatsApp)
               </Button>
             </div>
           </DialogContent>
@@ -147,12 +154,12 @@ export function ServicesSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {services.map((service, index) => (
           <AnimatedSection key={index} animation="fade-up" delay={index * 100}>
-            <Card className="bg-zinc-900/50 border-zinc-800 hover:border-zinc-700 transition-all duration-300 group h-full">
+            <Card className="bg-zinc-900/50 border-zinc-800 hover:border-cyan-500/30 transition-all duration-300 group h-full">
               <CardContent className="p-6">
-                <div className={`w-12 h-12 ${service.bg} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className={`w-6 h-6 ${service.color}`} />
+                <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110", service.bg)}>
+                  <service.icon className={cn("w-6 h-6", service.color)} />
                 </div>
-                <h4 className="text-lg font-medium mb-2 group-hover:text-cyan-400 transition-colors">{service.title}</h4>
+                <h4 className="text-lg font-bold mb-2 group-hover:text-cyan-400 transition-colors">{service.title}</h4>
                 <p className="text-zinc-400 text-sm leading-relaxed">
                   {service.description}
                 </p>

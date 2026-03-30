@@ -216,45 +216,5 @@
       "Mentoring",
       "Presentations"
     ]
-  },
-  "clientReviews": [
-    {
-      "client": "Dr. Michael",
-      "company": "Dr Appointment Web Application.",
-      "review": "Emmanuel demonstrated exceptional technical expertise and professionalism throughout our project. He architected and delivered a robust, scalable financial dashboard that exceeded our expectations. His proactive communication, attention to detail, and ability to solve complex problems made a significant impact on our product's success. I highly recommend Emmanuel to anyone seeking a reliable and talented full stack developer.",
-      "rating": 5,
-      "project": "Financial Analytics Dashboard",
-      "projectUrl": "https://aierth-tech.com"
-    },
-    {
-      "client": "Sarah",
-      "company": "HealthPlus Solutions",
-      "review": "It was a pleasure working with Emmanuel on our healthcare platform. He was quick to understand our requirements, provided valuable insights, and delivered high-quality code on time. His dedication and collaborative approach ensured a smooth development process from start to finish.",
-      "rating": 5,
-      "project": "Healthcare Platform Development"
-    },
-    {
-      "client": "Chinedu Okafor",
-      "company": "NaijaTech Solutions",
-      "review": "Emmanuel's expertise in full stack development was evident from the start. He delivered our logistics management system with impressive speed and precision. His ability to troubleshoot and optimize performance was invaluable. We look forward to working with him again.",
-      "rating": 5,
-      "project": "Logistics Management System",
-      "projectUrl": "https://naijatech.com"
-    },
-    {
-      "client": "Ngozi Nwosu",
-      "company": "EduConnect Africa",
-      "review": "Working with Emmanuel was a seamless experience. He transformed our ideas into a functional and visually appealing e-learning platform. His professionalism and technical skills are top-notch.",
-      "rating": 5,
-      "project": "E-learning Platform Development"
-    },
-    {
-      "client": "Emeka Umeh",
-      "company": "GreenFields Agro",
-      "review": "Emmanuel exceeded our expectations by delivering a robust and scalable web application for our agritech startup. His attention to detail and commitment to quality were outstanding.",
-      "rating": 5,
-      "project": "AgriTech Web Application",
-      "projectUrl": "https://greenfields.com"
-    }
-  ]
+  }
 }
