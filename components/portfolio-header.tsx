@@ -74,6 +74,28 @@ export function PortfolioHeader() {
     return isHomePage ? href : `/${href}`
   }
 
+  const [touchStart, setTouchStart] = useState<number | null>(null)
+  const [touchEnd, setTouchEnd] = useState<number | null>(null)
+
+  // the required distance between touchStart and touchEnd to be considered a swipe
+  const minSwipeDistance = 50
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const onTouchMove = (e: React.TouchEvent) => setTouchEnd(e.targetTouches[0].clientX)
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    const distance = touchStart - touchEnd
+    const isRightSwipe = distance < -minSwipeDistance
+    if (isRightSwipe) {
+      setMobileMenuOpen(false)
+    }
+  }
+
   return (
     <header
       className={cn(
@@ -153,8 +175,12 @@ export function PortfolioHeader() {
             ? "opacity-100 translate-x-0"
             : "opacity-0 translate-x-full pointer-events-none",
         )}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
       >
         <div className="flex flex-col h-full bg-zinc-950">
+          <div className="w-12 h-1 bg-zinc-800 rounded-full mx-auto mb-8 shrink-0 lg:hidden"></div>
           <nav className="flex flex-col space-y-2 mt-4 text-center">
             {navItems.map((item, index) => {
               const isActive =
