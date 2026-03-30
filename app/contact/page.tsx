@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { getPersonalInfo } from "@/lib/data"
 import { MessageCircle, Mail, MapPin, Loader2 } from "lucide-react"
+import { BrandWhatsAppIcon } from "@/components/icons/whatsapp-icon"
 import { useState } from "react"
 
 export default function ContactPage() {
@@ -35,7 +36,7 @@ export default function ContactPage() {
 
       <PortfolioHeader />
 
-      <div className="relative z-10 container mx-auto px-4 pt-24 pb-16">
+      <div className="relative z-10 container mx-auto px-4 pt-20 md:pt-32 pb-16">
         <AnimatedSection animation="fade-up" className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
             Let's Start a Conversation
@@ -49,14 +50,14 @@ export default function ContactPage() {
            {/* Contact Info Sidebar */}
            <div className="space-y-6">
               <AnimatedSection animation="slide-right">
-                 <Card className="bg-zinc-900 shadow-xl border-zinc-800 p-8 flex items-start gap-6 group hover:border-cyan-500/30 transition-all">
+                 <Card className="bg-zinc-900 shadow-xl border-zinc-800 p-6 sm:p-8 flex flex-col sm:flex-row items-start gap-4 sm:gap-6 group hover:border-cyan-500/30 transition-all">
                     <div className="w-14 h-14 rounded-2xl bg-cyan-400/10 flex items-center justify-center shrink-0">
                        <Mail className="w-7 h-7 text-cyan-400" />
                     </div>
                     <div>
                        <h3 className="text-xl font-bold mb-1">Email Me Directly</h3>
                        <p className="text-zinc-400 text-sm mb-4">Expect a response within 24 hours.</p>
-                       <a href={`mailto:${personalInfo.email}`} className="text-cyan-400 hover:text-cyan-300 font-bold underline">
+                       <a href={`mailto:${personalInfo.email}`} className="text-cyan-400 hover:text-cyan-300 font-bold underline break-all">
                           {personalInfo.email}
                        </a>
                     </div>
@@ -64,14 +65,14 @@ export default function ContactPage() {
               </AnimatedSection>
 
               <AnimatedSection animation="slide-right" delay={100}>
-                 <Card className="bg-zinc-900 shadow-xl border-zinc-800 p-8 flex items-start gap-6 group hover:border-green-500/30 transition-all">
+                 <Card className="bg-zinc-900 shadow-xl border-zinc-800 p-6 sm:p-8 flex flex-col sm:flex-row items-start gap-4 sm:gap-6 group hover:border-green-500/30 transition-all">
                     <div className="w-14 h-14 rounded-2xl bg-green-400/10 flex items-center justify-center shrink-0">
-                       <MessageCircle className="w-7 h-7 text-green-400" />
+                       <BrandWhatsAppIcon className="w-7 h-7 text-green-400" />
                     </div>
                     <div>
                        <h3 className="text-xl font-bold mb-1 text-green-400">WhatsApp Live Chat</h3>
                        <p className="text-zinc-400 text-sm mb-4">Fastest response for urgent projects.</p>
-                       <Button onClick={handleWhatsApp} className="bg-green-500 hover:bg-green-600 font-bold text-black h-12 uppercase tracking-wide">
+                       <Button onClick={handleWhatsApp} className="bg-green-500 hover:bg-green-600 font-bold text-black h-12 uppercase tracking-wide w-full sm:w-auto">
                           Start Chat Now
                        </Button>
                     </div>
@@ -88,7 +89,7 @@ export default function ContactPage() {
 
            {/* Contact Form */}
            <AnimatedSection animation="fade-up">
-              <Card className="bg-zinc-900/40 border-zinc-800 p-8 shadow-2xl backdrop-blur-sm">
+              <Card className="bg-zinc-900/40 border-zinc-800 p-6 sm:p-8 shadow-2xl backdrop-blur-sm">
                  <h2 className="text-2xl font-bold mb-6">Send Me a Message</h2>
                  <form className="space-y-4" onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
