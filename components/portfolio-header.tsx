@@ -169,7 +169,7 @@ export function PortfolioHeader() {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "fixed inset-0 bg-zinc-950 z-40 flex flex-col pt-24 px-6 md:hidden transition-all duration-500 ease-in-out",
+          "fixed inset-0 bg-zinc-950 z-[60] flex flex-col px-6 md:hidden transition-all duration-500 ease-in-out",
           "lg:hidden",
           mobileMenuOpen
             ? "opacity-100 translate-x-0"
@@ -179,8 +179,17 @@ export function PortfolioHeader() {
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
-        <div className="flex flex-col h-full bg-zinc-950">
-          <div className="w-12 h-1 bg-zinc-800 rounded-full mx-auto mb-8 shrink-0 lg:hidden"></div>
+        <div className="flex flex-col h-full bg-zinc-950 relative">
+          {/* Close Button inside Mobile Menu */}
+          <button
+            onClick={() => setMobileMenuOpen(false)}
+            className="absolute top-6 right-0 p-2 text-zinc-400 hover:text-white transition-colors"
+            aria-label="Close menu"
+          >
+            <X size={32} />
+          </button>
+
+          <div className="w-12 h-1 bg-zinc-800 rounded-full mx-auto mt-6 mb-8 shrink-0 lg:hidden"></div>
           <nav className="flex flex-col space-y-2 mt-4 text-center">
             {navItems.map((item, index) => {
               const isActive =

@@ -42,32 +42,33 @@
     ]
   },
   "about": {
-    "bio": "I help businesses and startups turn their ideas into high-performing, scalable digital products. With over 5 years of experience in full-stack development, I don't just write code—I build solutions that drive user engagement and business growth. My approach combines technical excellence with a deep understanding of user experience.",
+    "bio": "I am a results-driven Full Stack Developer with over 5 years of experience architecting high-performance digital solutions. My mission is to bridge the gap between complex business logic and seamless user experiences. I specialize in building scalable web architectures and secure mobile applications that don't just function—they excel in performance and user retention. I have worked with international startups to help them scale from seed to series A by providing robust technical foundations.",
     "focus": [
-      "Building conversion-optimized web applications",
-      "Developing high-performance cross-platform mobile apps",
-      "Scaling technical infrastructure for growth",
-      "User-centric UI/UX design for better retention"
+      "Engineering conversion-optimized, high-traffic web platforms",
+      "Developing mission-critical cross-platform mobile apps",
+      "Architecting scalable cloud-native backend infrastructures",
+      "Data-driven UI/UX design focused on user retention and growth",
+      "Optimizing performance for sub-second load times"
     ],
     "languages": [
       {
         "name": "English",
-        "proficiency": "Native",
+        "proficiency": "Professional Working Proficiency",
         "level": 100,
         "flag": "🇺🇸"
       },
       {
         "name": "Pidgin English",
-        "proficiency": "Native",
-        "level": 90,
-        "flag": "pidgin"
+        "proficiency": "Native Speaker",
+        "level": 100,
+        "flag": "🇳🇬"
       }
     ],
     "interests": [
-      "Product Strategy",
-      "Frontend Performance",
-      "Backend Scalability",
-      "UI Interaction"
+      "Scalable Architecture",
+      "Frontend Engineering",
+      "Backend Performance",
+      "Product Strategy"
     ]
   },
   "navigation": [
@@ -76,20 +77,24 @@
       "href": "/"
     },
     {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Services",
+      "href": "/services"
+    },
+    {
       "label": "Experience",
-      "href": "#experience"
-    },
-    {
-      "label": "Credentials",
-      "href": "#credentials"
-    },
-    {
-      "label": "Skills",
-      "href": "#skills"
+      "href": "/#experience"
     },
     {
       "label": "Projects",
-      "href": "#projects"
+      "href": "/projects"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
     }
   ],
   "experience": [
