@@ -4,7 +4,7 @@ import portfolioData from "../data/portfolio-data.json";
 import { Card, CardContent } from "@/components/ui/card";
 
 const ClientReviews = () => {
-  const reviews = portfolioData.clientReviews;
+  const reviews = portfolioData.clientReviews as any[];
   if (!reviews || reviews.length === 0) return null;
 
   return (
@@ -20,7 +20,15 @@ const ClientReviews = () => {
               </div>
               <div className="text-sm text-zinc-400 mb-2">{review.company}</div>
               <div className="italic mb-4 text-zinc-200">&ldquo;{review.review}&rdquo;</div>
-              <div className="text-xs text-zinc-500">Project: {review.project}</div>
+              <div className="text-xs text-zinc-500">
+                Project: {review.projectUrl ? (
+                  <a href={review.projectUrl} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">
+                    {review.project}
+                  </a>
+                ) : (
+                  <span>{review.project} <span className="text-zinc-600 italic">(undisclosed)</span></span>
+                )}
+              </div>
             </CardContent>
           </Card>
         ))}

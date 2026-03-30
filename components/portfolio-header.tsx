@@ -77,8 +77,8 @@ export function PortfolioHeader() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4",
-        showSolidBackground ? "bg-zinc-900/90 backdrop-blur-md shadow-md py-2" : "bg-transparent",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3",
+        "bg-zinc-950 border-b border-white/10 shadow-2xl",
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between gap-4">
@@ -97,7 +97,10 @@ export function PortfolioHeader() {
         <nav className="hidden lg:flex items-center space-x-1 shrink-0">
           {navItems.map((item) => {
             const isActive =
-              isHomePage && (item.href === "/" ? activeSection === "" : activeSection === item.href.substring(1))
+              isHomePage &&
+              (item.href === "/"
+                ? activeSection === ""
+                : activeSection === item.href.substring(1));
 
             return (
               <Link
@@ -105,7 +108,7 @@ export function PortfolioHeader() {
                 href={getNavHref(item.href)}
                 className={cn(
                   "px-3 py-2 text-sm relative group transition-all duration-300",
-                  isActive ? "text-cyan-400" : "text-zinc-400 hover:text-white",
+                  isActive ? "text-cyan-400 font-bold" : "text-zinc-400 hover:text-white",
                 )}
               >
                 <span className="relative z-10">{item.label}</span>
@@ -113,7 +116,7 @@ export function PortfolioHeader() {
                 {/* Hover effect - subtle background glow */}
                 <span className="absolute inset-0 bg-cyan-500/0 rounded-md group-hover:bg-cyan-500/10 transition-all duration-300"></span>
 
-                {/* Hover effect - bottom border */}
+                {/* Active/Hover effect - bottom border */}
                 <span
                   className={cn(
                     "absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-4/5",
@@ -121,74 +124,71 @@ export function PortfolioHeader() {
                   )}
                 ></span>
               </Link>
-            )
+            );
           })}
         </nav>
 
         {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden text-zinc-400 hover:text-white transition-colors duration-300 relative overflow-hidden group"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle menu"
-          type="button"
-        >
-          <span className="relative z-10">{mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}</span>
-          <span className="absolute inset-0 scale-0 rounded-full bg-zinc-700/50 group-hover:scale-100 transition-transform duration-300"></span>
-        </button>
+        <div className="flex items-center lg:hidden">
+          <button
+            className="text-zinc-400 hover:text-white transition-colors duration-300 relative overflow-hidden group p-2"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+            type="button"
+          >
+            <span className="relative z-10">
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </span>
+            <span className="absolute inset-0 scale-0 rounded-full bg-zinc-700/50 group-hover:scale-100 transition-transform duration-300"></span>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "fixed inset-0 bg-black/95 z-40 flex flex-col pt-20 px-4 md:hidden transition-all duration-500",
+          "fixed inset-0 bg-zinc-950 z-40 flex flex-col pt-24 px-6 md:hidden transition-all duration-500 ease-in-out",
           "lg:hidden",
-          mobileMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none",
+          mobileMenuOpen
+            ? "opacity-100 translate-x-0"
+            : "opacity-0 translate-x-full pointer-events-none",
         )}
       >
-        <div className="flex justify-end mb-6">
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(false)}
-            className="inline-flex items-center justify-center rounded-full border border-zinc-800 bg-zinc-900/80 p-3 text-zinc-300 transition-colors hover:text-white hover:border-cyan-400/50"
-            aria-label="Close menu"
-          >
-            <X size={22} />
-          </button>
-        </div>
-        <nav className="flex flex-col space-y-4">
-          {navItems.map((item, index) => {
-            const isActive =
-              isHomePage && (item.href === "/" ? activeSection === "" : activeSection === item.href.substring(1))
+        <div className="flex flex-col h-full bg-zinc-950">
+          <nav className="flex flex-col space-y-2 mt-4 text-center">
+            {navItems.map((item, index) => {
+              const isActive =
+                isHomePage &&
+                (item.href === "/"
+                  ? activeSection === ""
+                  : activeSection === item.href.substring(1));
 
-            return (
-              <Link
-                key={item.label}
-                href={getNavHref(item.href)}
-                className={cn(
-                  "px-3 py-4 text-lg border-b border-zinc-800 relative group transition-all duration-300",
-                  isActive ? "text-cyan-400 border-cyan-400/30" : "text-zinc-300 hover:text-white hover:pl-5",
-                )}
-                onClick={() => setMobileMenuOpen(false)}
-                style={{
-                  transitionDelay: `${index * 50}ms`,
-                  transform: mobileMenuOpen ? "translateX(0)" : "translateX(20px)",
-                  opacity: mobileMenuOpen ? 1 : 0,
-                }}
-              >
-                <span className="relative z-10">{item.label}</span>
-
-                {/* Hover effect - left border accent */}
-                <span
+              return (
+                <Link
+                  key={item.label}
+                  href={getNavHref(item.href)}
                   className={cn(
-                    "absolute left-0 top-1/2 -translate-y-1/2 w-0 h-1/2 bg-gradient-to-b from-cyan-400/20 to-blue-500/20 transition-all duration-300 group-hover:w-1",
-                    isActive && "w-1",
+                    "px-3 py-6 text-xl border-b border-zinc-800/50 relative group transition-all duration-300",
+                    isActive
+                      ? "text-cyan-400 font-bold bg-zinc-900/50"
+                      : "text-zinc-300 hover:text-white",
                   )}
-                ></span>
-              </Link>
-            )
-          })}
-        </nav>
+                  onClick={() => setMobileMenuOpen(false)}
+                  style={{
+                    transitionDelay: `${index * 50}ms`,
+                    transform: mobileMenuOpen
+                      ? "translateX(0)"
+                      : "translateX(20px)",
+                    opacity: mobileMenuOpen ? 1 : 0,
+                  }}
+                >
+                  <span className="relative z-10">{item.label}</span>
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
       </div>
     </header>
-  )
+  );
 }

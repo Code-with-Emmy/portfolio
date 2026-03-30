@@ -6,7 +6,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { SocialLinks } from "@/components/social-links"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { User, MapPin, Mail, Phone, Languages, Clock, Briefcase } from "lucide-react"
+import { User, MapPin, Mail, Phone, Languages, Clock, Briefcase, MessageSquare } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import { getPersonalInfo, getAboutInfo } from "@/lib/data"
 
 export function EnhancedProfile() {
@@ -16,42 +17,51 @@ export function EnhancedProfile() {
   const aboutInfo = getAboutInfo()
 
   return (
-    <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm col-span-1 flex flex-col">
+    <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm col-span-1 flex flex-col shadow-2xl">
       <CardContent className="p-0">
         {/* Profile Header - Improved mobile layout */}
-        <div className="bg-gradient-to-r from-zinc-800/50 to-zinc-900/50 p-4 sm:p-6 flex flex-col items-center border-b border-zinc-800">
-          <div className="flex flex-col sm:flex-col items-center w-full">
-            <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden mb-4 border-2 border-cyan-400/20 ring-4 ring-zinc-800/50">
+        <div className="bg-gradient-to-br from-zinc-800/80 via-zinc-900/80 to-black p-4 sm:p-6 flex flex-col items-center border-b border-zinc-800">
+          <div className="flex flex-col items-center w-full">
+            <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden mb-4 border-2 border-cyan-400 group cursor-pointer ring-4 ring-zinc-800/50">
               <Image
                 src={personalInfo.avatar || "/placeholder.svg"}
                 alt={personalInfo.name}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
+              <div className="absolute inset-0 bg-cyan-400/10 opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
             <div className="text-center">
-              <h2 className="text-xl sm:text-2xl font-bold">{personalInfo.name}</h2>
-              <p className="text-sm text-cyan-400 mb-1">{personalInfo.title}</p>
-              <div className="flex items-center justify-center text-xs text-zinc-400 mb-3">
+              <h2 className="text-xl sm:text-2xl font-bold tracking-tight">{personalInfo.name}</h2>
+              <p className="text-sm font-medium text-cyan-400 mb-2">{personalInfo.title}</p>
+              <div className="flex items-center justify-center text-xs text-zinc-400 mb-4 bg-zinc-800/50 py-1 px-3 rounded-full mx-auto">
                 <MapPin className="w-3 h-3 mr-1" />
                 <span>{personalInfo.location}</span>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-2 justify-center mb-4">
-            {personalInfo.badges.map((badge, index) => (
-              <Badge key={index} variant="outline" className="bg-zinc-800/50 hover:bg-zinc-700">
-                {badge}
-              </Badge>
-            ))}
+          <div className="w-full flex flex-col gap-3 mb-6">
+            <Button 
+              onClick={() => setActiveTab("contact")}
+              className="w-full bg-cyan-500 hover:bg-cyan-600 text-black font-bold h-10 transition-all hover:scale-[1.02] active:scale-[0.98]"
+            >
+              Hire Me <MessageSquare className="w-4 h-4 ml-2" />
+            </Button>
+            <div className="flex flex-wrap gap-2 justify-center">
+              {personalInfo.badges.map((badge: string, index: number) => (
+                <Badge key={index} variant="outline" className="bg-zinc-800/50 border-zinc-700 text-[10px] uppercase tracking-wider px-2 py-0">
+                  {badge}
+                </Badge>
+              ))}
+            </div>
           </div>
 
           <SocialLinks socialLinks={personalInfo.social} />
         </div>
 
         {/* Tabbed Content - Mobile optimized */}
-        <Tabs defaultValue="about" className="w-full" onValueChange={setActiveTab}>
+        <Tabs value={activeTab} className="w-full" onValueChange={setActiveTab}>
           <div className="border-b border-zinc-800">
             <TabsList className="w-full bg-transparent border-b border-zinc-800 rounded-none h-auto p-0">
               <TabsTrigger
@@ -90,7 +100,7 @@ export function EnhancedProfile() {
                 Professional Focus
               </h3>
               <div className="space-y-2">
-                {aboutInfo.focus.map((item, index) => (
+                {aboutInfo.focus.map((item: string, index: number) => (
                   <div key={index} className="flex items-start">
                     <span className="text-cyan-400 mr-2">•</span>
                     <p className="text-sm">{item}</p>
@@ -105,7 +115,7 @@ export function EnhancedProfile() {
                 Languages
               </h3>
               <div className="space-y-3">
-                {aboutInfo.languages.map((language, index) => (
+                {aboutInfo.languages.map((language: any, index: number) => (
                   <div key={index} className="space-y-1">
                     <div className="flex justify-between items-center">
                       <span className="text-sm">{language.name}</span>
