@@ -129,7 +129,7 @@ export default function Home() {
                         Case Studies & Recent Work
                       </h3>
                     </div>
-                    <Link href="#projects">
+                    <Link href="/projects">
                       <Button
                         variant="outline"
                         size="sm"

@@ -33,6 +33,58 @@ export interface Project {
 const projects: Project[] = [
   {
     id: 1,
+    slug: "rentium",
+    title: "Rentium",
+    category: "Identity & Virtual Infrastructure",
+    shortDescription:
+      "A premium platform for decentralizing mobile identity with high-reputation virtual infrastructure.",
+    description: [
+      "Rentium is a sophisticated infrastructure platform that allows users to rent high-reputation virtual numbers for secure identity verification and privacy protection.",
+      "The platform features a real-time wallet system, an invite-and-earn rewards mechanism, and automated service delivery for social media and email accounts, all through a polished developer-centric interface.",
+    ],
+    features: [
+      "High-reputation virtual number rentals for SMS verification",
+      "Real-time wallet management with multi-currency support",
+      "Instant delivery for social media and email account purchases",
+      "Invite & earn rewards system with lifetime commission",
+      "Secure dashboard with real-time network status monitoring",
+    ],
+    technologies: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "Supabase",
+      "Tailwind CSS",
+    ],
+    coverImage: "/rentium-landing.png",
+    thumbnailImage: "/rentium-landing.png",
+    gallery: [
+      { url: "/rentium-landing.png", caption: "Rentium landing page" },
+      { url: "/rentium-dashboard.png", caption: "Rentium user dashboard" },
+      { url: "/rentium-menu.png", caption: "Service navigation menu" },
+    ],
+    client: "Rentium Infrastructure",
+    timeline: "2026",
+    role: "Full Stack Developer",
+    liveUrl: "https://rentium-seven.vercel.app",
+    relatedProjects: [
+      {
+        slug: "aierth-tech",
+        title: "Aierth Tech",
+        category: "EdTech Platform",
+        image: "/aierth-tech.png",
+      },
+      {
+        slug: "pulsepitchlive",
+        title: "PulsePitch Live",
+        category: "Sports Streaming Platform",
+        image: "/pulsepitlive.png",
+      },
+    ],
+  },
+  {
+    id: 2,
     slug: "aierth-tech",
     title: "Aierth Tech",
     category: "EdTech Platform",
@@ -69,21 +121,21 @@ const projects: Project[] = [
     githubUrl: "https://github.com/code-with-emmy/aierth-technology",
     relatedProjects: [
       {
+        slug: "rentium",
+        title: "Rentium",
+        category: "Identity & Virtual Infrastructure",
+        image: "/rentium-landing.png",
+      },
+      {
         slug: "pulsepitchlive",
         title: "PulsePitch Live",
         category: "Sports Streaming Platform",
         image: "/pulsepitlive.png",
       },
-      {
-        slug: "attendance-kiosk",
-        title: "Attendance Kiosk",
-        category: "Biometric Attendance System",
-        image: "/attendance.png",
-      },
     ],
   },
   {
-    id: 2,
+    id: 3,
     slug: "pulsepitchlive",
     title: "PulsePitch Live",
     category: "Sports Streaming Platform",
@@ -116,21 +168,21 @@ const projects: Project[] = [
     liveUrl: "https://pulsepitchlive.vercel.app",
     relatedProjects: [
       {
+        slug: "rentium",
+        title: "Rentium",
+        category: "Identity & Virtual Infrastructure",
+        image: "/rentium-landing.png",
+      },
+      {
         slug: "aierth-tech",
         title: "Aierth Tech",
         category: "EdTech Platform",
         image: "/aierth-tech.png",
       },
-      {
-        slug: "attendance-kiosk",
-        title: "Attendance Kiosk",
-        category: "Biometric Attendance System",
-        image: "/attendance.png",
-      },
     ],
   },
   {
-    id: 3,
+    id: 4,
     slug: "attendance-kiosk",
     title: "Attendance Kiosk",
     category: "Biometric Attendance System",
@@ -163,16 +215,16 @@ const projects: Project[] = [
     liveUrl: "https://attendancekiosk.vercel.app",
     relatedProjects: [
       {
+        slug: "rentium",
+        title: "Rentium",
+        category: "Identity & Virtual Infrastructure",
+        image: "/rentium-landing.png",
+      },
+      {
         slug: "aierth-tech",
         title: "Aierth Tech",
         category: "EdTech Platform",
         image: "/aierth-tech.png",
-      },
-      {
-        slug: "pulsepitchlive",
-        title: "PulsePitch Live",
-        category: "Sports Streaming Platform",
-        image: "/pulsepitlive.png",
       },
     ],
   },
